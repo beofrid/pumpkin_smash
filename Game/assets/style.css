@@ -1,0 +1,130 @@
+body {background: #000000}
+
+.master { 
+    font-family: 'Lacquer', cursive;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: -38px;
+    width: 670px;
+    max-width: 700px;
+    height: auto;
+   
+}
+
+h1 {
+    font-family: 'Astloch', cursive;
+    color: darkred;
+    text-align: center;    
+    font-size: 55px;
+    text-shadow: 2px 2px 2px red;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.displayImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+    height: 462px;   
+    min-height: 462px;  
+}
+
+.anvil {
+    margin-bottom: 79px;
+    transition: transform 1s ease;
+}
+
+.anvil:hover{
+    transform: translateY(-3vh);
+}
+
+.incorrect {
+    text-decoration: line-through;
+    font-family: 'Special Elite', cursive;
+    text-justify: center;
+    font-size: 3em;
+    height: 48px;
+    min-height: 40px;
+    width: 490px; 
+    margin: 0 auto;
+    margin-bottom: 8px;
+    border: 3pt inset rgb(129, 89, 35);
+    background: #004225;
+    color: #a5a5a5;
+}
+
+.display {
+    display: flex;
+    height: 480px;
+    width: 465px;
+    border: 25px;
+    border-color: rgb(72, 105, 117);
+    border-style: outset;
+    justify-content: space-around;
+    gap: 1pt;
+    padding-left: 5pt;
+    background-image: linear-gradient(rgb(61, 89, 99) 80%, rgb(23, 66, 36) 83%);
+   
+}
+
+.displayLetter {
+    background: rgb(157, 196, 209);
+    font-size: 70px;
+    line-height: 80%;
+    text-align: center;
+    margin-top: 60px;
+    width: 80px;
+    min-width: 62px;
+    max-width: 100px;
+    height: 60px;
+    min-height: 62px;
+    max-height: 100px;
+    border-bottom:3pt solid black;   
+}
+
+
+
+.inputChar {
+    margin: 0 auto;
+    margin-top: 1vh;
+    margin-bottom:1vh;
+}
+
+.char {
+    font-family: 'Special Elite', cursive;
+    color: #a5a5a5;
+    text-align: center;
+    font-weight:800;
+    font-size: 3em;
+    width: 1em;
+    background: #004225;
+    /* color: #a5a5a5; */
+}
+
+
+.char::placeholder {
+    color: white;
+    text-shadow: 3pt 2pt 2px black;
+    font-family: 'Special Elite', cursive;
+    font-size: 40pt;
+    font-weight: 100;
+    
+}
+
+ .description {
+    height: 125px;
+    margin: 0 auto;
+    width: 490px;
+    padding: 10px;
+    font-size: 1.3em;
+    border: 3pt inset rgb(129, 89, 35);
+    background: #004225;
+    color: #a5a5a5;
+
+}
+

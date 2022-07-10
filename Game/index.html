@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROCA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Astloch&family=Lacquer&family=Rubik+Moonrocks&family=Special+Elite&display=swap');
+    </style>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="master">
+        <h1>Pumpkin Smash</h1>
+
+        <div class="incorrect" id="incorrect"></div>
+
+
+        <div class="container">
+            <div class="display">
+                <div class="displayLetter st"></div>
+                <div class="displayLetter"></div>
+                <div class="displayLetter"></div>
+                <div class="displayLetter"></div>
+                <div class="displayLetter"></div>
+                <div class="content displayImage">
+                    <img src="assets/anvil.png" alt="anvil" class="anvil">
+                    <img src="assets/pumpkin.png" alt="pumpkin" class="pumpkin">
+            </div>
+        </div>
+          
+          
+    
+        </div>
+        <div class="inputChar">
+            <input 
+                type="text" 
+                name="char"
+                id="char" 
+                placeholder="_"
+                class="char" 
+                maxlength="1"
+                onchange="indexLetter()">
+     
+        </div>
+            
+       <div id='description' class="description"></div>     
+    </div><!-- master -->
+    
+    <script src="assets/script.js"></script>
+</body>
+</html>
