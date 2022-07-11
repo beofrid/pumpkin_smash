@@ -35,12 +35,20 @@ h1 {
 }
 
 .anvil {
-    margin-bottom: 79px;
-    transition: transform 1s ease;
+    margin-bottom: 79px; 
+    transition: transform 1000ms ease;
 }
 
-.anvil:hover{
-    transform: translateY(-3vh);
+.anvil:active{ animation: an1 2s ease-out; 
+  
+}
+
+.pumpkin {
+    transition: transform 1000ms ease;
+}
+
+.pumpkin:hover{
+    transform: scale(1.04);
 }
 
 .incorrect {
@@ -71,6 +79,8 @@ h1 {
     background-image: linear-gradient(rgb(61, 89, 99) 80%, rgb(23, 66, 36) 83%);
    
 }
+
+.animate {animation: an2 150ms infinite;}
 
 .displayLetter {
     background: rgb(157, 196, 209);
@@ -128,3 +138,22 @@ h1 {
 
 }
 
+@keyframes an1 {
+    0% {transform: translateY(0px)}
+    55% {transform: translateY(-30px)}
+    60% {transform: translateY(0px)}
+    70% {transform: translateY(-10px)}
+    80% {transform: translateY(-0px)}
+    90% {transform: translateY(-7px)}
+    100% {transform: translateY(0)}
+
+}
+
+@keyframes an2 {
+    0% {transform: rotate(0.3deg);}
+    33% {transform: rotate(0deg);}
+    66% {transform: rotate(-0.3deg);}
+    100% {transform: rotate(0deg);}
+    
+    
+}

@@ -16,7 +16,7 @@ let div3 = document.querySelectorAll('.displayLetter')[3]
 let div4 = document.querySelectorAll('.displayLetter')[4]
 
 //to animation
-const wrongArray = []
+var wrongArray = []
 
 
 //description
@@ -159,53 +159,37 @@ function indexLetter () {
         else {
             wrong.innerText += ` ${char}`
             wrongArray.push(char)}
-    
-    
     }
-    console.log (typeof(wrongArray), wrongArray)
 
+    console.log (typeof(wrongArray), wrongArray.length)
+    
+    // animation
+        function animation () {
+            document.getElementById('anvil')
+            document.getElementById('display')
+            
 
-
+            if (wrongArray.length == 2){anvil.style.transform = "translateY(-30px)";}
+            if (wrongArray.length == 4){anvil.style.transform = "translateY(-80px)";}
+            if (wrongArray.length == 6){anvil.style.transform = "translateY(-150px)";}
+            if (wrongArray.length == 8){
+                anvil.style.transform = "translateY(-210px)";
+                display.classList.add("animate")
+            }
+            if (wrongArray.length == 10){
+            
+            }              
+        
+        }
+        animation()
     
     
-    }
     
-
-   
-
-
-
     
-
     
+    
+    
+            console.log (typeof(wrongArray), wrongArray.length)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+    
