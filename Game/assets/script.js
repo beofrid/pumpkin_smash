@@ -201,3 +201,14 @@ function indexLetter () {
 
 }
     
+
+function help () {
+    document.getElementById("text")
+    text.style.transform = "translateY(30px)"
+    text.style.opacity = "100"
+}
+function help2 () {
+    document.getElementById("text")
+    text.style.opacity = "0"
+    text.style.transform = "translateY(-20px)"
+}

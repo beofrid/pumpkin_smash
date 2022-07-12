@@ -1,4 +1,7 @@
-body {background: #000000}
+body { margin: 0;
+    background: #000000;
+    display: flex;
+}
 
 .master { 
     font-family: 'Lacquer', cursive;
@@ -9,8 +12,37 @@ body {background: #000000}
     width: 670px;
     max-width: 700px;
     height: auto;
-   
 }
+
+aside {
+    color: white;
+    background-color: cornflowerblue;
+    margin: 0;
+    width: 24vw;
+    min-width: 60PX;
+}
+.help{
+    position:absolute;
+    background-color: #004225;
+    margin-top: 50px;
+    height: 40px;
+    width: 24vw;
+    text-align: center;
+    line-height: 40px;
+    z-index: 1;
+    
+}
+
+.text {
+    position: relative;
+    background-color: #804225;
+    margin-top: -30px;
+    transition: all 1500ms;
+    opacity: 0;
+    z-index: 2;
+   }
+
+
 
 h1 {
     font-family: 'Astloch', cursive;
