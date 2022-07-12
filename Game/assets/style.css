@@ -33,10 +33,13 @@ h1 {
     height: 462px;   
     min-height: 462px;  
 }
+.hidden {
+    display: none;
+}
 
 .anvil {
     margin-bottom: 79px; 
-    transition: transform 1000ms ease;
+    transition: transform 1000ms ease-out;
 }
 
 .anvil:active{ animation: an1 2s ease-out; 

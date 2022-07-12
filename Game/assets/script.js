@@ -167,16 +167,24 @@ function indexLetter () {
         function animation () {
             document.getElementById('anvil')
             document.getElementById('display')
+            document.getElementById('pumpkin')
             
 
-            if (wrongArray.length == 2){anvil.style.transform = "translateY(-30px)";}
-            if (wrongArray.length == 4){anvil.style.transform = "translateY(-80px)";}
-            if (wrongArray.length == 6){anvil.style.transform = "translateY(-150px)";}
-            if (wrongArray.length == 8){
+            if (wrongArray.length == 1){anvil.style.transform = "translateY(-30px)";}
+            if (wrongArray.length == 2){anvil.style.transform = "translateY(-80px)";}
+            if (wrongArray.length == 3){anvil.style.transform = "translateY(-150px)";}
+            if (wrongArray.length == 4){
                 anvil.style.transform = "translateY(-210px)";
                 display.classList.add("animate")
             }
-            if (wrongArray.length == 10){
+            if (wrongArray.length == 5){
+                anvil.src ="assets/anvilFall.png"
+                anvil.style.transform = "translateY(150px)"
+                setTimeout(() => {
+                    pumpkin.src = "assets/end.png"
+                    anvil.classList.add("hidden")}, 800); 
+               
+                
             
             }              
         
