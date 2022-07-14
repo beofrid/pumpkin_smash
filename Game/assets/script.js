@@ -165,19 +165,42 @@ function indexLetter () {
     
     // animation
         function animation () {
+                //difficulty
+    
+                let radio = document.querySelectorAll('input[name="difficulty"]');
+                    for(let i = 0; i < radio.length; i++)
+                        if (radio[i].checked) {
+                            if (radio[i].value == "Easy"){
+                                console.log("Escolheu easy")
+                             }
+                            else if (radio[i].value == "Medium"){
+                                var wrong1 = 1
+                                var wrong2 = 2
+                                var wrong3 = 3
+                                var wrong4 = 4
+                                var wrong5 = 5
+                                console.log("Escolheu medium")
+                            }
+                            else if (radio[i].value == "Hard"){
+                                console.log("Escolheu hard")}
+                        }
+        
+       
+            
+            
             document.getElementById('anvil')
             document.getElementById('display')
             document.getElementById('pumpkin')
             
 
-            if (wrongArray.length == 1){anvil.style.transform = "translateY(-30px)";}
-            if (wrongArray.length == 2){anvil.style.transform = "translateY(-80px)";}
-            if (wrongArray.length == 3){anvil.style.transform = "translateY(-150px)";}
-            if (wrongArray.length == 4){
+            if (wrongArray.length == wrong1){anvil.style.transform = "translateY(-30px)";}
+            if (wrongArray.length == wrong2){anvil.style.transform = "translateY(-80px)";}
+            if (wrongArray.length == wrong3){anvil.style.transform = "translateY(-150px)";}
+            if (wrongArray.length == wrong4){
                 anvil.style.transform = "translateY(-210px)";
                 display.classList.add("animate")
             }
-            if (wrongArray.length == 5){
+            if (wrongArray.length == wrong5){
                 anvil.src ="assets/anvilFall.png"
                 anvil.style.transform = "translateY(150px)"
                 setTimeout(() => {
@@ -212,3 +235,5 @@ function help2 () {
     text.style.opacity = "0"
     text.style.transform = "translateY(-20px)"
 }
+
+
