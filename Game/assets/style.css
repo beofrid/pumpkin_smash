@@ -8,11 +8,13 @@ body {
     font-family: 'Lacquer', cursive;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
     margin-top: -38px;
     width: 670px;
     max-width: 700px;
     height: auto;
+
+    /* background-color: pink; */
 }
 
 aside {
@@ -67,6 +69,7 @@ aside {
     }
     .selectWord:hover { 
         cursor: pointer;
+        color: rgb(228, 115, 115);
         text-shadow: 1px 1px 2px red,
             -1px 1px 2px red,
             1px -1px 2px red,
