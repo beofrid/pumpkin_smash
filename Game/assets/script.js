@@ -171,6 +171,11 @@ function indexLetter () {
                     for(let i = 0; i < radio.length; i++)
                         if (radio[i].checked) {
                             if (radio[i].value == "Easy"){
+                                var wrong1 = 2
+                                var wrong2 = 4
+                                var wrong3 = 6
+                                var wrong4 = 8
+                                var wrong5 = 10
                                 console.log("Escolheu easy")
                              }
                             else if (radio[i].value == "Medium"){
@@ -182,6 +187,12 @@ function indexLetter () {
                                 console.log("Escolheu medium")
                             }
                             else if (radio[i].value == "Hard"){
+                                var wrong1 = 1
+                                var wrong2 = 1
+                                var wrong3 = 1
+                                var wrong4 = 2
+                                var wrong5 = 3
+
                                 console.log("Escolheu hard")}
                         }
         
@@ -236,4 +247,32 @@ function help2 () {
     text.style.transform = "translateY(-20px)"
 }
 
+let i = 0
+
+function tip () {
+    
+    let menu = document.getElementById('menu')
+    let bar = document.getElementsByClassName('bar')
+    
+    if (i === 0){
+        bar[0].classList.add("n1")
+        bar[1].classList.add("n2")
+        bar[2].classList.add("n3")
+        menu.classList.add("resize")
+        setTimeout(() => {menu.classList.add("reposition")}, 1100)
+
+        i++
+}
+    else if (i === 1) {
+        bar[0].classList.remove("n1")
+        bar[1].classList.remove("n2")
+        bar[2].classList.remove("n3")
+        menu.classList.remove("resize")
+        setTimeout(() => {menu.classList.remove("reposition")}, 1100)
+        
+        i--
+    }
+    console.log(i)
+   
+}
 
