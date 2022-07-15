@@ -193,6 +193,58 @@ h1 {
     
 }
 
+.bar { 
+    background-color: #a5a5a5;
+    width: 45px;
+    height: 10px;
+    transition: 1000ms;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 125px;
+    margin: 0 auto;
+    width: 490px;
+    padding: 10px;
+    height: 153px;
+    width: 518px;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    background-color: purple;
+    width: 55px;
+    height: 55px;
+    transition: 1500ms;
+}
+
+.n1 {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+.n2{
+    opacity: 0;
+}
+.n3 {
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.resize{
+    animation: tip 3s;}
+
+.reposition{
+    transition: transform ease-in 1500ms;
+    transform: translateY(-58px);
+
+}
+
+
  .description {
     height: 125px;
     margin: 0 auto;
@@ -203,7 +255,12 @@ h1 {
     background: #004225;
     color: #a5a5a5;
 
+
+
 }
+
+.hidden {display: none;}
+
 
 @keyframes an1 {
     0% {transform: translateY(0px)}
@@ -216,11 +273,21 @@ h1 {
 
 }
 
+/* last chance animation */
 @keyframes an2 {
     0% {transform: rotate(0.3deg);}
     33% {transform: rotate(0deg);}
     66% {transform: rotate(-0.3deg);}
     100% {transform: rotate(0deg);}
+       
+}
+
+@keyframes tip {
+    0% {}
+    30% {height: 153px;
+    width: 518px;}
+    100% {}
     
-    
+
+
 }
