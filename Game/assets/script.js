@@ -229,8 +229,6 @@ function indexLetter () {
     
     
     
-    
-    
             console.log (typeof(wrongArray), wrongArray.length)
 
 }
@@ -247,7 +245,7 @@ function help2 () {
     text.style.transform = "translateY(-20px)"
 }
 
-let i = 0
+var tipSwitch = 0
 
 function tip () {
     
