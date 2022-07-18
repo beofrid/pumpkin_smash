@@ -192,9 +192,8 @@ function indexLetter () {
                                 var wrong3 = 1
                                 var wrong4 = 2
                                 var wrong5 = 3
-
-                                console.log("Escolheu hard")}
-                        }
+                                                               
+                            }
         
        
             
@@ -232,7 +231,13 @@ function indexLetter () {
             console.log (typeof(wrongArray), wrongArray.length)
 
 }
-    
+console.log(typeof(hard))  
+function hideMenu(){
+    let hard = document.getElementById('hard')
+    if(hard == checked){console.log(typeof(hard))}
+    let menu = document.getElementById('menu')
+    menu.classList.add("hidden")} 
+    console.log("Escolheu hard")}
 
 function help () {
     document.getElementById("text")
@@ -251,26 +256,29 @@ function tip () {
     
     let menu = document.getElementById('menu')
     let bar = document.getElementsByClassName('bar')
+    let description = document.getElementById('description')
     
-    if (i === 0){
+    if (tipSwitch === 0){
         bar[0].classList.add("n1")
         bar[1].classList.add("n2")
         bar[2].classList.add("n3")
         menu.classList.add("resize")
+        setTimeout(() => {description.classList.remove("opacity")}, 800)
         setTimeout(() => {menu.classList.add("reposition")}, 1100)
 
-        i++
+        tipSwitch++
 }
-    else if (i === 1) {
+    else if (tipSwitch === 1) {
         bar[0].classList.remove("n1")
         bar[1].classList.remove("n2")
         bar[2].classList.remove("n3")
         menu.classList.remove("resize")
+        setTimeout(() => {description.classList.add("opacity")}, 1100)
         setTimeout(() => {menu.classList.remove("reposition")}, 1100)
         
-        i--
+        tipSwitch--
     }
-    console.log(i)
+    console.log(tipSwitch)
    
 }
 
