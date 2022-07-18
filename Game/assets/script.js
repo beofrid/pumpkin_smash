@@ -4,9 +4,10 @@ let data = [
     'velho', 'regra', 'ordem', 'clava', 'prosa', 'usura', 'manso', 'limbo', 'pleno', 'humor',
     'acaso', 'cisma', 'valor', 'ritmo', 'garbo', 'prumo', 'laico', 'parco', 'noite', 'ajuda']
   
-
-let word = data[Math.floor(Math.random()*data.length)]
-// let word = 'ajuda'
+let indexWord = Math.floor(Math.random()*data.length)
+let word = data[indexWord]
+console.log(indexWord)
+// let word = 'pudor'
 
 //div assign
 let div0 = document.querySelectorAll('.displayLetter')[0]
@@ -23,7 +24,8 @@ var wrongArray = []
 addEventListener('load', onLoad)
 
 function onLoad () {
-    
+    let selected = document.querySelectorAll(".selectWord")
+    selected[indexWord].classList.add("selectedWord")  
      //descripton of word
      let indexDescription = document.getElementById('description')
     switch (word) {
@@ -192,12 +194,11 @@ function indexLetter () {
                                 var wrong3 = 1
                                 var wrong4 = 2
                                 var wrong5 = 3
-                                                               
+                                console.log("Escolheu hard")
+                            }                             
                             }
         
        
-            
-            
             document.getElementById('anvil')
             document.getElementById('display')
             document.getElementById('pumpkin')
@@ -215,10 +216,7 @@ function indexLetter () {
                 anvil.style.transform = "translateY(150px)"
                 setTimeout(() => {
                     pumpkin.src = "assets/end.png"
-                    anvil.classList.add("hidden")}, 800); 
-               
-                
-            
+                    anvil.classList.add("hidden")}, 800);           
             }              
         
         }
@@ -228,16 +226,9 @@ function indexLetter () {
     
     
     
-            console.log (typeof(wrongArray), wrongArray.length)
+        console.log (typeof(wrongArray), wrongArray.length)
 
 }
-console.log(typeof(hard))  
-function hideMenu(){
-    let hard = document.getElementById('hard')
-    if(hard == checked){console.log(typeof(hard))}
-    let menu = document.getElementById('menu')
-    menu.classList.add("hidden")} 
-    console.log("Escolheu hard")}
 
 function help () {
     document.getElementById("text")
@@ -281,4 +272,8 @@ function tip () {
     console.log(tipSwitch)
    
 }
+
+
+
+
 
