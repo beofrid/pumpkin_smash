@@ -73,11 +73,24 @@
 
         <div class="container">
             <div class="display" id="display">
+                <div class="inputChar">
+                    <input 
+                        type="text" 
+                        name="char"
+                        id="char" 
+                        placeholder="_"
+                        class="char" 
+                        maxlength="1"
+                        onchange="indexLetter()">
+              
+            
+                </div>
                 <div class="displayLetter st"></div>
                 <div class="displayLetter"></div>
                 <div class="displayLetter"></div>
                 <div class="displayLetter"></div>
                 <div class="displayLetter"></div>
+                
                 <div class="content displayImage">
                     <img src="assets/anvil.png" alt="anvil" class="anvil" id="anvil">
                     <img src="assets/pumpkin.png" alt="pumpkin" class="pumpkin" id="pumpkin">
@@ -87,20 +100,10 @@
           
     
         </div>
-        <div class="inputChar">
-            <input 
-                type="text" 
-                name="char"
-                id="char" 
-                placeholder="_"
-                class="char" 
-                maxlength="1"
-                onchange="indexLetter()">
-     
-        </div>
+        
 
         <div class="menuContainer">
-            <div id='description' class="description"></div>
+            <div id='description' class="description opacity"></div>
             <div class="menu" id="menu" onclick="tip()">
                 <div class="bar"></div>
                 <div class="bar"></div>
