@@ -67,6 +67,15 @@ aside {
         text-align: center;
         font-family: 'Special Elite', cursive;
     }
+    .selectedWord{
+        cursor: pointer;
+        color: rgb(228, 115, 115);
+        text-shadow: 1px 1px 2px red,
+            -1px 1px 2px red,
+            1px -1px 2px red,
+            -1px -1px 2px red;
+    }
+
     .selectWord:hover { 
         cursor: pointer;
         color: rgb(228, 115, 115);
