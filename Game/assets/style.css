@@ -16,6 +16,10 @@ body {
 
     /* background-color: pink; */
 }
+.blur {
+    filter: blur(2px);
+    display: flex;
+}
 
 aside {
     color: white;
@@ -39,7 +43,7 @@ aside {
 
     .help2 {
         background-color: #004225;
-         z-index: 1;
+        z-index: 1;
     }
 
     .text {
@@ -83,7 +87,7 @@ aside {
             -1px 1px 2px red,
             1px -1px 2px red,
             -1px -1px 2px red;
-        }
+    }
 
 h1 {
     font-family: 'Astloch', cursive;
@@ -268,9 +272,7 @@ h1 {
     background-color: rgb(92, 0, 0);
     
 }
-
-
- .description {
+.description {
     height: 125px;
     margin: 0 auto;
     width: 490px;
@@ -288,6 +290,14 @@ h1 {
 
 .hidden {display: none;}
 
+.all {display: flex}
+
+.difficulty {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: crimson;
+}
 
 @keyframes an1 {
     0% {transform: translateY(0px)}
