@@ -9,6 +9,8 @@ let word = data[indexWord]
 console.log(indexWord)
 // let word = 'pudor'
 
+let tipSwitch = 0
+
 //div assign
 let div0 = document.querySelectorAll('.displayLetter')[0]
 let div1 = document.querySelectorAll('.displayLetter')[1]
@@ -26,7 +28,7 @@ addEventListener('load', onLoad)
 function onLoad () {
     let selected = document.querySelectorAll(".selectWord")
     selected[indexWord].classList.add("selectedWord")  
-     //descripton of word
+         //descripton of word
      let indexDescription = document.getElementById('description')
     switch (word) {
     case 'pudor': indexDescription.innerText = "Sentimento e atitude desenvolvidos por uma educação rígida calcada em conceitos culturais."
@@ -241,8 +243,6 @@ function help2 () {
     text.style.transform = "translateY(-20px)"
 }
 
-var tipSwitch = 0
-
 function tip () {
     
     let menu = document.getElementById('menu')
@@ -273,7 +273,14 @@ function tip () {
    
 }
 
-
-
-
-
+// function selectedWord () {
+//     let selected = document.querySelectorAll('.selectWord')
+//    selected.forEach(item => {
+//         item.addEventListener('click', () => {
+//         console.log(selected.value)
+            
+//         })
+//       })
+// }selectedWord()
+    
+    
