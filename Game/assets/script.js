@@ -196,6 +196,8 @@ function indexLetter () {
                                 var wrong3 = 1
                                 var wrong4 = 2
                                 var wrong5 = 3
+                                
+
                                 console.log("Escolheu hard")
                             }                             
                             }
@@ -271,6 +273,27 @@ function tip () {
     }
     console.log(tipSwitch)
    
+}
+
+function difficulty() {
+
+    let toHide1 = document.getElementById("block")
+        toHide1.style.display = "none"
+
+    let filterRemove = document.getElementById("mainSection")
+        filterRemove.classList.remove("blur")
+
+    let radio = document.querySelectorAll('input[name="difficulty"]');
+        if (radio[2].checked){
+            if (radio[2].value === "Hard"){
+                console.log("Escolheu hard")
+                    let menu = document.getElementById('hiddenIfHard')
+                        menu.style.display = "none"}}
+
+   
+
+
+
 }
 
 // function selectedWord () {
