@@ -12,57 +12,33 @@
 </head>
 <body>
 
-<section class="blur">
+<section class="blur" id="mainSection">
     <aside>
         <div class="help" id="help" onmouseover="help()" onmouseleave="help2()">
-            <div class="help2">Ajuda</div>            
-            <div class="text" id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, nihil.</div>
-        </div>
-        <div class="selectMaster">
-            <div class="selectWord">01</div>
-            <div class="selectWord">02</div>
-            <div class="selectWord">03</div>
-            <div class="selectWord">04</div>
-            <div class="selectWord">05</div>
-            <div class="selectWord">06</div>
-            <div class="selectWord">07</div>
-            <div class="selectWord">08</div>
-            <div class="selectWord">09</div>
-            <div class="selectWord">10</div>
-            <div class="selectWord">11</div>
-            <div class="selectWord">12</div>
-            <div class="selectWord">13</div>
-            <div class="selectWord">14</div>
-            <div class="selectWord">15</div>
-            <div class="selectWord">16</div>
-            <div class="selectWord">17</div>
-            <div class="selectWord">18</div>
-            <div class="selectWord">19</div>
-            <div class="selectWord">20</div>
-            <div class="selectWord">21</div>
-            <div class="selectWord">22</div>
-            <div class="selectWord">23</div>
-            <div class="selectWord">24</div>
-            <div class="selectWord">25</div>
-            <div class="selectWord">26</div>
-            <div class="selectWord">27</div>
-            <div class="selectWord">28</div>
-            <div class="selectWord">29</div>
-            <div class="selectWord">30</div>
-            <div class="selectWord">31</div>
-            <div class="selectWord">32</div>
-            <div class="selectWord">33</div>
-            <div class="selectWord">34</div>
-            <div class="selectWord">35</div>
-            <div class="selectWord">36</div>
-            <div class="selectWord">37</div>
-            <div class="selectWord">38</div>
-            <div class="selectWord">39</div>
-            <div class="selectWord">40</div>
+            <div class="help2">Ajuda</div>  
 
-        </div> 
-    
-    
+            <div class="text" id="text">
+            <p>
+                Evite que a abóbora seja esmagada para vencer.
+                O jogo funciona como a forca tradicional, insira seu palpite na placa. 
+            </p>
+            <p>
+                - Na dificuldade fácil você pode errar até 09 vezes;
+            </p>
+            <p>
+                - No médio, pode errar 04 vezes;
+            </p>
+            <p>
+                - No difícil são permitidos apenas 02 erros e não pode ver a dica.
+            </p>
+                
+
+            </div>
+
+
+
+
+        </div>   
     </aside>
     
     
@@ -103,7 +79,7 @@
         </div>
         
 
-        <div class="menuContainer">
+        <div class="menuContainer" id="hiddenIfHard">
             <div id='description' class="description opacity"></div>
             <div class="menu" id="menu" onclick="tip()">
                 <div class="bar"></div>
@@ -114,12 +90,58 @@
 
 
 
-
-
            
     </div><!-- master -->
+<aside>
+    <div class="selectMaster">
+        <div class="selectWord">01</div>
+        <div class="selectWord">02</div>
+        <div class="selectWord">03</div>
+        <div class="selectWord">04</div>
+        <div class="selectWord">05</div>
+        <div class="selectWord">06</div>
+        <div class="selectWord">07</div>
+        <div class="selectWord">08</div>
+        <div class="selectWord">09</div>
+        <div class="selectWord">10</div>
+        <div class="selectWord">11</div>
+        <div class="selectWord">12</div>
+        <div class="selectWord">13</div>
+        <div class="selectWord">14</div>
+        <div class="selectWord">15</div>
+        <div class="selectWord">16</div>
+        <div class="selectWord">17</div>
+        <div class="selectWord">18</div>
+        <div class="selectWord">19</div>
+        <div class="selectWord">20</div>
+        <div class="selectWord">21</div>
+        <div class="selectWord">22</div>
+        <div class="selectWord">23</div>
+        <div class="selectWord">24</div>
+        <div class="selectWord">25</div>
+        <div class="selectWord">26</div>
+        <div class="selectWord">27</div>
+        <div class="selectWord">28</div>
+        <div class="selectWord">29</div>
+        <div class="selectWord">30</div>
+        <div class="selectWord">31</div>
+        <div class="selectWord">32</div>
+        <div class="selectWord">33</div>
+        <div class="selectWord">34</div>
+        <div class="selectWord">35</div>
+        <div class="selectWord">36</div>
+        <div class="selectWord">37</div>
+        <div class="selectWord">38</div>
+        <div class="selectWord">39</div>
+        <div class="selectWord">40</div>
+
+    </div> 
+</aside>
 </section>
-        <div class="difficulty">
+
+
+      <div class="block" id="block">
+        <div class="difficulty" id="difficulty">
             <p>Escolha a dificuldade</p>
 
             <input type="radio" name="difficulty" id="easy" value="Easy">
@@ -132,7 +154,8 @@
                 <label for="difficulty">Difícil</label>
 
             <button onclick="difficulty()">ok</button>
-        </div> 
+        </div>
+      </div>
 
 
     <script src="assets/script.js"></script>
