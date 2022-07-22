@@ -348,7 +348,13 @@ h1 {
     30% {height: 153px;
     width: 518px;}
     100% {}
-    
+}
 
-
+@media only screen and(max-width: 1215px){
+    .asideSpecial {display: none;}
+}
+@media only screen and(max-width: 890px){
+    body {width: 100%;}
+    .aside {display: none;}
+    .block {width: 100%;}
 }
