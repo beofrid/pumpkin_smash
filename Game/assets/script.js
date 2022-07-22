@@ -18,6 +18,15 @@ let div2 = document.querySelectorAll('.displayLetter')[2]
 let div3 = document.querySelectorAll('.displayLetter')[3]
 let div4 = document.querySelectorAll('.displayLetter')[4]
 
+// alphabet
+
+// let alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+let alphabettoString = alphabet.toString()
+let alphabetToUpperCase = alphabettoString.toUpperCase()
+let arraya = alphabetToUpperCase.split()
+
+console.log(arraya)
 //to animation
 var wrongArray = []
 
