@@ -20,13 +20,11 @@ let div4 = document.querySelectorAll('.displayLetter')[4]
 
 // alphabet
 
-// let alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-let alphabettoString = alphabet.toString()
-let alphabetToUpperCase = alphabettoString.toUpperCase()
-let arraya = alphabetToUpperCase.split()
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"];
 
-console.log(arraya)
+
+
 //to animation
 var wrongArray = []
 
@@ -130,50 +128,52 @@ function indexLetter () {
     //get the element of user input
     let inputCharacter = document.getElementById('char')
     let char1 = inputCharacter.value
-    let char = char1.toLowerCase();
     inputCharacter.value = ""
+    if (alphabet.includes(char1)){
+        let char = char1.toLowerCase();
+    
 
-    //assign data to incorrect output
-    let wrong = document.getElementById('incorrect')
+        //assign data to incorrect output
+        let wrong = document.getElementById('incorrect')
  
   
-    //index separation of drawn word
-    let word0 = word[0]
-    let word1 = word[1]
-    let word2 = word[2]
-    let word3 = word[3]
-    let word4 = word[4]
+        //index separation of drawn word
+        let word0 = word[0]
+        let word1 = word[1]
+        let word2 = word[2]
+        let word3 = word[3]
+        let word4 = word[4]
 
-    // //console test
-    // console.log(word0,word1,word2,word3,word4,word)
+        // //console test
+        // console.log(word0,word1,word2,word3,word4,word)
 
-    //conditional to fill the word
-    if (char === word0){
-        div0.innerHTML = word0       
-    }
-    if (char === word1){
-        div1.innerHTML = word1
-    }
-    if (char === word2){
-        div2.innerHTML = word2
-    }
-    if (char === word3){
-        div3.innerHTML = word3
-    }
-    if (char === word4){
-        div4.innerHTML = word4
-    }
-
-    //
-    if (char !== word0 && char !== word1 && char !== word2 && char !== word3 && char !== word4){
-        if (wrongArray.includes(char)){
-            alert("Você já tentou essa letra! 😠")
+        //conditional to fill the word
+        if (char === word0){
+            div0.innerHTML = word0       
         }
-        else {
-            wrong.innerText += ` ${char}`
-            wrongArray.push(char)}
-    }
+        if (char === word1){
+            div1.innerHTML = word1
+        }
+        if (char === word2){
+        div2.innerHTML = word2
+        }
+        if (char === word3){
+            div3.innerHTML = word3
+        }
+        if (char === word4){
+            div4.innerHTML = word4
+        }
 
+        //
+        if (char !== word0 && char !== word1 && char !== word2 && char !== word3 && char !== word4){
+            if (wrongArray.includes(char)){
+                alert("Você já tentou essa letra! 😠")
+            }
+            else {
+                wrong.innerText += ` ${char}`
+                wrongArray.push(char)}
+        }
+    }
     console.log (typeof(wrongArray), wrongArray.length)
     
     // animation
