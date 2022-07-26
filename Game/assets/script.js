@@ -1,25 +1,26 @@
+// array with all words used in the game
 let data = [
     'pudor', 'labor', 'nobre', 'moral', 'poder', 'amora', 'gouda', 'massa', 'sonho', 'farsa',
     'amigo', 'coser', 'prole', 'tenaz', 'digno', 'culto', 'orgia', 'denso', 'forte', 'coeso',
     'velho', 'regra', 'ordem', 'clava', 'prosa', 'usura', 'manso', 'limbo', 'pleno', 'humor',
     'acaso', 'cisma', 'valor', 'ritmo', 'garbo', 'prumo', 'laico', 'parco', 'noite', 'ajuda']
   
+// pick random word of data array 
 let indexWord = Math.floor(Math.random()*data.length)
 let word = data[indexWord]
 console.log(indexWord)
-// let word = 'pudor'
 
+//switch variable to be used on animations
 let tipSwitch = 0
 
-//div assign
+//assign letters to each div
 let div0 = document.querySelectorAll('.displayLetter')[0]
 let div1 = document.querySelectorAll('.displayLetter')[1]
 let div2 = document.querySelectorAll('.displayLetter')[2]
 let div3 = document.querySelectorAll('.displayLetter')[3]
 let div4 = document.querySelectorAll('.displayLetter')[4]
 
-// alphabet
-
+// alphabet: accepted characters on input
 let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"];
 
@@ -29,13 +30,13 @@ let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
 var wrongArray = []
 
 
-//description
+//tip of each word
 addEventListener('load', onLoad)
 
 function onLoad () {
     let selected = document.querySelectorAll(".selectWord")
     selected[indexWord].classList.add("selectedWord")  
-         //descripton of word
+         //descripton
      let indexDescription = document.getElementById('description')
     switch (word) {
     case 'pudor': indexDescription.innerText = "Sentimento e atitude desenvolvidos por uma educação rígida calcada em conceitos culturais."
@@ -120,10 +121,12 @@ function onLoad () {
     break
     default: indexDescription.innerText = "nothing"
         break;
-}
+    }
 
 }
-
+function reload() {
+    window.location.reload(true)
+}
 function indexLetter () { 
     //get the element of user input
     let inputCharacter = document.getElementById('char')
@@ -164,7 +167,7 @@ function indexLetter () {
             div4.innerHTML = word4
         }
 
-        //
+        //already tried letter filter
         if (char !== word0 && char !== word1 && char !== word2 && char !== word3 && char !== word4){
             if (wrongArray.includes(char)){
                 alert("Você já tentou essa letra! 😠")
@@ -174,57 +177,67 @@ function indexLetter () {
                 wrongArray.push(char)}
         }
     }
-    console.log (typeof(wrongArray), wrongArray.length)
+
+    //console test
+    //console.log (typeof(wrongArray), wrongArray.length)
     
     // animation
-        function animation () {
-                //difficulty
+function animation () {
+    //difficulty
+        let radio = document.querySelectorAll('input[name="difficulty"]');
     
-                let radio = document.querySelectorAll('input[name="difficulty"]');
-                    for(let i = 0; i < radio.length; i++)
-                        if (radio[i].checked) {
-                            if (radio[i].value == "Easy"){
-                                var wrong1 = 2
-                                var wrong2 = 4
-                                var wrong3 = 6
-                                var wrong4 = 8
-                                var wrong5 = 10
-                                console.log("Escolheu easy")
-                             }
-                            else if (radio[i].value == "Medium"){
-                                var wrong1 = 1
-                                var wrong2 = 2
-                                var wrong3 = 3
-                                var wrong4 = 4
-                                var wrong5 = 5
-                                console.log("Escolheu medium")
-                            }
-                            else if (radio[i].value == "Hard"){
-                                var wrong1 = 1
-                                var wrong2 = 1
-                                var wrong3 = 1
-                                var wrong4 = 2
-                                var wrong5 = 3
-                                
-
-                                console.log("Escolheu hard")
-                            }                             
-                            }
+    //set values to each difficulty
+        for(let i = 0; i < radio.length; i++)
+            if (radio[i].checked) {
+                if (radio[i].value == "Easy"){
+                    var wrong1 = 2
+                    var wrong2 = 4
+                    var wrong3 = 6
+                    var wrong4 = 8
+                    var wrong5 = 10
+                    console.log("Escolheu easy")
+                }
         
-       
-            document.getElementById('anvil')
-            document.getElementById('display')
-            document.getElementById('pumpkin')
+                else if (radio[i].value == "Medium"){
+                    var wrong1 = 1
+                    var wrong2 = 2
+                    var wrong3 = 3
+                    var wrong4 = 4
+                    var wrong5 = 5
+                    console.log("Escolheu medium")
+                }
+        
+                else if (radio[i].value == "Hard"){
+                    var wrong1 = 1
+                    var wrong2 = 1
+                    var wrong3 = 1
+                    var wrong4 = 2
+                    var wrong5 = 3
+                    console.log("Escolheu hard")
+                }                             
+            }
+        
+        // elements to anvil/pumpkin animation
+        document.getElementById('anvil')
+        document.getElementById('display')
+        document.getElementById('pumpkin')
             
 
-            if (wrongArray.length == wrong1){anvil.style.transform = "translateY(-30px)";}
-            if (wrongArray.length == wrong2){anvil.style.transform = "translateY(-80px)";}
-            if (wrongArray.length == wrong3){anvil.style.transform = "translateY(-150px)";}
-            if (wrongArray.length == wrong4){
+        //anvil animation
+        if (wrongArray.length == wrong1){
+            anvil.style.transform = "translateY(-30px)";
+        }
+        if (wrongArray.length == wrong2){
+            anvil.style.transform = "translateY(-80px)";
+        }
+        if (wrongArray.length == wrong3){
+            anvil.style.transform = "translateY(-150px)";
+        }
+        if (wrongArray.length == wrong4){
                 anvil.style.transform = "translateY(-210px)";
                 display.classList.add("animate")
             }
-            if (wrongArray.length == wrong5){
+        if (wrongArray.length == wrong5){
                 anvil.src ="assets/anvilFall.png"
                 anvil.style.transform = "translateY(150px)"
                 setTimeout(() => {
@@ -305,6 +318,15 @@ function difficulty() {
 
 }
 
+function wonOrLost () {
+    if (div0.innerHTML !== ""){alert("something")}
+ console.log(div0.length)
+
+
+
+
+
+} wonOrLost()
 // function selectedWord () {
 //     let selected = document.querySelectorAll('.selectWord')
 //    selected.forEach(item => {

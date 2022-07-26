@@ -4,6 +4,40 @@ body {
     display: flex;
     
 }
+.situation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+}
+.result { 
+    margin: auto;
+    background-color: black;
+    border: solid 2pt  #fafafa;
+    color:#a5a5a5;
+    width: 50%;
+    height: 300px;
+    font-size: 30pt;
+    text-align: center;
+    cursor: default;
+}
+
+.congrat{ 
+    font-family: 'Lacquer', cursive;
+    color: rgb(114, 3, 3);
+    text-shadow: 1px 1px 3px #a5a5a5;
+}
+
+.restart {
+    background-color: white;
+    margin-left: -1px;
+    margin-top: 48px;
+    cursor: pointer;
+
+
+}
 
 .master { 
     font-family: 'Lacquer', cursive;
