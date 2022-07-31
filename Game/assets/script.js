@@ -251,7 +251,22 @@ function animation () {
     
     
     
-    
+    function wonOrLost () {
+    if (
+        div0.length === 1
+        && div1.length === 1
+        && div2.length === 1
+        && div3.length === 1
+        && div4.length === 1){
+        alert ("win")
+    }
+ console.log("hi ",div0.length)
+
+
+
+
+
+} wonOrLost()
         console.log (typeof(wrongArray), wrongArray.length)
 
 }
@@ -318,15 +333,22 @@ function difficulty() {
 
 }
 
-function wonOrLost () {
-    if (div0.innerHTML !== ""){alert("something")}
- console.log(div0.length)
+// function wonOrLost () {
+//     if (
+//         div0.length !== 0
+//         && div1.length !== 0
+//         && div2.length !== 0
+//         && div3.length !== 0
+//         && div4.length !== 0){
+//         alert ("win")
+//     }
+//  console.log("hi ",div0.length)
 
 
 
 
 
-} wonOrLost()
+// } wonOrLost()
 // function selectedWord () {
 //     let selected = document.querySelectorAll('.selectWord')
 //    selected.forEach(item => {
