@@ -24,7 +24,7 @@ let div4 = document.querySelectorAll('.displayLetter')[4]
 let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"];
 
-let loose = 0
+let lose = 0
 
 //to animation
 let wrongArray = []
@@ -137,13 +137,7 @@ function indexLetter () {
     
 
         //assign data to incorrect output
-        let wrong = document.getElementById('incorrect')
-        let situation = document.getElementById('situation')
-        let congrat = document.getElementById('congrat')
-        let displayLoose = () => {congrat.innertext = "Perdeu"} 
-        let displayWin = () => {congrat.innertext = "Venceu"} 
-        
- 
+        let wrong = document.getElementById('incorrect') 
   
         //index separation of drawn word
         let word0 = word[0]
@@ -191,6 +185,16 @@ function animation () {
     //difficulty
         let radio = document.querySelectorAll('input[name="difficulty"]');
     
+// end game lose depends of the var wrong5, so the elements are declared here
+
+        let situation = document.getElementById('situation')
+        let congrat = document.getElementById('congrat')
+        let displayLose = () => { 
+            congrat.innerText = "Perdeu"
+            situation.classList.remove("hidden")
+           } 
+        
+
     //set values to each difficulty
         for(let i = 0; i < radio.length; i++)
             if (radio[i].checked) {
@@ -200,6 +204,7 @@ function animation () {
                     var wrong3 = 6
                     var wrong4 = 8
                     var wrong5 = 10
+                    if (wrongArray.length === wrong5) {displayLose()}
                 }
         
                 else if (radio[i].value == "Medium"){
@@ -209,6 +214,7 @@ function animation () {
                     var wrong4 = 4
                     var wrong5 = 5
                     console.log("Escolheu medium")
+                    if (wrongArray.length === wrong5) {displayLose()}
                 }
         
                 else if (radio[i].value == "Hard"){
@@ -218,8 +224,9 @@ function animation () {
                     var wrong4 = 2
                     var wrong5 = 3
                     console.log("Escolheu hard")
+                    if (wrongArray.length === wrong5) {displayLose()}                     
                 } 
-                if (wrongArray.length === wrong5) {loose = 1 }                     
+                if (wrongArray.length === wrong5) {lose = 1 }                     
             }
         
         // elements to anvil/pumpkin animation
@@ -264,7 +271,8 @@ function animation () {
             && div2.innerText.length === 1
             && div3.innerText.length === 1
             && div4.innerText.length === 1){
-            alert ("win")
+            situation.classList.remove("hidden")
+            congrat.innerText = "Venceu"
         }
         
     
