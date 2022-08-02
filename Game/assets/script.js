@@ -24,10 +24,10 @@ let div4 = document.querySelectorAll('.displayLetter')[4]
 let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"];
 
-
+let loose = 0
 
 //to animation
-var wrongArray = []
+let wrongArray = []
 
 
 //tip of each word
@@ -138,6 +138,11 @@ function indexLetter () {
 
         //assign data to incorrect output
         let wrong = document.getElementById('incorrect')
+        let situation = document.getElementById('situation')
+        let congrat = document.getElementById('congrat')
+        let displayLoose = () => {congrat.innertext = "Perdeu"} 
+        let displayWin = () => {congrat.innertext = "Venceu"} 
+        
  
   
         //index separation of drawn word
@@ -195,7 +200,6 @@ function animation () {
                     var wrong3 = 6
                     var wrong4 = 8
                     var wrong5 = 10
-                    console.log("Escolheu easy")
                 }
         
                 else if (radio[i].value == "Medium"){
@@ -214,7 +218,8 @@ function animation () {
                     var wrong4 = 2
                     var wrong5 = 3
                     console.log("Escolheu hard")
-                }                             
+                } 
+                if (wrongArray.length === wrong5) {loose = 1 }                     
             }
         
         // elements to anvil/pumpkin animation
@@ -251,22 +256,20 @@ function animation () {
     
     
     
-    function wonOrLost () {
-    if (
-        div0.length === 1
-        && div1.length === 1
-        && div2.length === 1
-        && div3.length === 1
-        && div4.length === 1){
-        alert ("win")
-    }
- console.log("hi ",div0.length)
-
-
-
-
-
-} wonOrLost()
+    function end () {
+  
+        if (
+            div0.innerText.length === 1
+            && div1.innerText.length === 1
+            && div2.innerText.length === 1
+            && div3.innerText.length === 1
+            && div4.innerText.length === 1){
+            alert ("win")
+        }
+        
+    
+    } 
+end()
         console.log (typeof(wrongArray), wrongArray.length)
 
 }
@@ -332,7 +335,6 @@ function difficulty() {
 
 
 }
-
 // function wonOrLost () {
 //     if (
 //         div0.length !== 0
