@@ -177,10 +177,8 @@ function indexLetter () {
         }
     }
 
-    //console test
-    //console.log (typeof(wrongArray), wrongArray.length)
-    
-    // animation
+   
+    // animation, difficulty and endgame
 function animation () {
     //difficulty
         let radio = document.querySelectorAll('input[name="difficulty"]');
@@ -343,30 +341,3 @@ function difficulty() {
 
 
 }
-// function wonOrLost () {
-//     if (
-//         div0.length !== 0
-//         && div1.length !== 0
-//         && div2.length !== 0
-//         && div3.length !== 0
-//         && div4.length !== 0){
-//         alert ("win")
-//     }
-//  console.log("hi ",div0.length)
-
-
-
-
-
-// } wonOrLost()
-// function selectedWord () {
-//     let selected = document.querySelectorAll('.selectWord')
-//    selected.forEach(item => {
-//         item.addEventListener('click', () => {
-//         console.log(selected.value)
-            
-//         })
-//       })
-// }selectedWord()
-    
-    
