@@ -34,8 +34,8 @@ let wrongArray = []
 addEventListener('load', onLoad)
 
 function onLoad () {
-    let selected = document.querySelectorAll(".selectWord")
-    selected[indexWord].classList.add("selectedWord")  
+    // let selected = document.querySelectorAll(".selectWord")
+    // selected[indexWord].classList.add("selectedWord")  
          //descripton
      let indexDescription = document.getElementById('description')
     switch (word) {
