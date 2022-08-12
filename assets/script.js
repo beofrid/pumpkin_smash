@@ -1,9 +1,14 @@
+
+
+
+
 // array with all words used in the game
 let data = [
     'pudor', 'labor', 'nobre', 'moral', 'poder', 'amora', 'gouda', 'massa', 'sonho', 'farsa',
     'amigo', 'coser', 'prole', 'tenaz', 'digno', 'culto', 'orgia', 'denso', 'forte', 'coeso',
     'velho', 'regra', 'ordem', 'clava', 'prosa', 'usura', 'manso', 'limbo', 'pleno', 'humor',
-    'acaso', 'cisma', 'valor', 'ritmo', 'garbo', 'prumo', 'laico', 'parco', 'noite', 'ajuda']
+    'acaso', 'cisma', 'valor', 'ritmo', 'garbo', 'prumo', 'laico', 'parco', 'noite', 'ajuda'
+]
   
 // pick random word of data array 
 let indexWord = Math.floor(Math.random()*data.length)
@@ -11,7 +16,7 @@ let word = data[indexWord]
 console.log(indexWord)
 
 //switch variable to be used on animations
-let tipSwitch = 0
+let hintSwitch = 0
 
 //assign letters to each div
 let div0 = document.querySelectorAll('.displayLetter')[0]
@@ -25,19 +30,17 @@ let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"];
 
 let lose = 0
-
 //to animation
 let wrongArray = []
 
 
-//tip of each word
-addEventListener('load', onLoad)
+//=====================================================================================================================================================================================
+//the "onLoad" function sets on page load a hint for each word
+//=====================================================================================================================================================================================
 
+addEventListener('load', onLoad)
 function onLoad () {
-    // let selected = document.querySelectorAll(".selectWord")
-    // selected[indexWord].classList.add("selectedWord")  
-         //descripton
-     let indexDescription = document.getElementById('description')
+    let indexDescription = document.getElementById('description')
     switch (word) {
     case 'pudor': indexDescription.innerText = "Sentimento e atitude desenvolvidos por uma educação rígida calcada em conceitos culturais."
         break;
@@ -127,6 +130,16 @@ function onLoad () {
 function reload() {
     window.location.reload(true)
 }
+
+
+
+//=====================================================================================================================================================================================
+// The most important function. Here the input field triggers multiple events:
+    // get the letter written by the user on input
+    // set a default lower case for entering data
+    // assiign wrong letters to "incorrect" display
+    //
+//=====================================================================================================================================================================================
 function indexLetter () { 
     //get the element of user input
     let inputCharacter = document.getElementById('char')
@@ -179,20 +192,22 @@ function indexLetter () {
 
    
     // animation, difficulty and endgame
-function animation () {
+    function animation () {
+
     //difficulty
         let radio = document.querySelectorAll('input[name="difficulty"]');
     
-// end game lose depends of the var wrong5, so the elements are declared here
-
+    // end game lose depends of the var wrong5, so the elements are declared here
         let situation = document.getElementById('situation')
         let congrat = document.getElementById('congrat')
         let displayLose = () => { 
             congrat.innerText = "Perdeu"
-            situation.classList.remove("hidden")
+            setTimeout(() => {
+                situation.classList.remove("hidden")
+
+            }, 1500);
            } 
         
-
     //set values to each difficulty
         for(let i = 0; i < radio.length; i++)
             if (radio[i].checked) {
@@ -224,7 +239,7 @@ function animation () {
                     console.log("Escolheu hard")
                     if (wrongArray.length === wrong5) {displayLose()}                     
                 } 
-                if (wrongArray.length === wrong5) {lose = 1 }                     
+                // if (wrongArray.length === wrong5) {lose = 1 }                     
             }
         
         // elements to anvil/pumpkin animation
@@ -291,13 +306,13 @@ function help2 () {
     text.style.transform = "translateY(-20px)"
 }
 
-function tip () {
+function hint () {
     
     let menu = document.getElementById('menu')
     let bar = document.getElementsByClassName('bar')
     let description = document.getElementById('description')
     
-    if (tipSwitch === 0){
+    if (hintSwitch === 0){
         bar[0].classList.add("n1")
         bar[1].classList.add("n2")
         bar[2].classList.add("n3")
@@ -305,9 +320,9 @@ function tip () {
         setTimeout(() => {description.classList.remove("opacity")}, 800)
         setTimeout(() => {menu.classList.add("reposition")}, 1100)
 
-        tipSwitch++
+        hintSwitch++
 }
-    else if (tipSwitch === 1) {
+    else if (hintSwitch === 1) {
         bar[0].classList.remove("n1")
         bar[1].classList.remove("n2")
         bar[2].classList.remove("n3")
@@ -315,9 +330,9 @@ function tip () {
         setTimeout(() => {description.classList.add("opacity")}, 1100)
         setTimeout(() => {menu.classList.remove("reposition")}, 1100)
         
-        tipSwitch--
+        hintSwitch--
     }
-    console.log(tipSwitch)
+    console.log(hintSwitch)
    
 }
 

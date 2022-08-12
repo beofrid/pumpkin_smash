@@ -267,7 +267,7 @@ h1 {
     height: 10px;
     transition: 1000ms;
 }
-.tip {
+.hint {
     line-height: 10px;
     font-size: 10pt;
 }
@@ -310,7 +310,7 @@ h1 {
 }
 
 .resize{
-    animation: tip 3s;}
+    animation: hint 3s;}
 
 .reposition{
     transition: all ease-in 1500ms;
@@ -413,7 +413,7 @@ h1 {
        
 }
 
-@keyframes tip {
+@keyframes hint {
     0% {}
     30% {height: 153px;
     width: 518px;}
