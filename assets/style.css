@@ -159,7 +159,7 @@ h1 {
 
 .anvil {
     margin-bottom: 79px; 
-    transition: transform 1000ms ease-out;
+    transition: transform 1000ms ease-in;
 }
 
 .anvil:active{ animation: an1 2s ease-out; 
