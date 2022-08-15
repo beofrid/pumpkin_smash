@@ -267,7 +267,7 @@ function indexLetter () {
                 anvil.style.transform = "translateY(150px)"
                 setTimeout(() => {
                     pumpkin.src = "assets/end.png"
-                    anvil.classList.add("hidden")}, 800);           
+                    anvil.classList.add("hidden")}, 1000);           
             }              
         
         }
